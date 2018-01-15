@@ -8,20 +8,86 @@
 
 body {
   margin: 0;
-  width: 1920px;
 }
 
-.header {
-  padding: 0 235px;
-  height: 50px;
-  width: 100%;
+.headerWrapper {
+  margin-left: auto;
+  margin-right: auto;
   border-bottom: @silver 2px solid;
   border-top: @border 1px solid;
-  display: inline-flex;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  .header {
+    height: 50px;
+    width: 69%;
+    display: inline-flex;
+    justify-content: space-between;
+  }
+  .navBtn {
+    display: inline-block;
+    img {
+      width: 20px;
+      height: 20px;
+      fill: @lightgrey;
+      margin: 0px 8px 0 0;
+      vertical-align: -5%;
+    }
+    &.info img {
+      transform: rotate(23deg);
+    }
+    span {
+      min-width: 140px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-family: Montserrat;
+      font-size: 14px;
+      color: @lightgrey;
+      font-weight: 300;
+      text-decoration: none solid rgb(112, 112, 112);
+    }
+  }
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    > li.navBtn {
+      display: inline-block;
+      margin-right: 1px;
+
+/*      &.spacing:after {
+        content: "";
+        width: 31px;
+        height: 1px;
+        background: @border url("images/Line 1.svg") no-repeat fixed center;
+        transform: rotate(90deg);
+        display: inline-block;
+        position: absolute;
+        margin: 0 7px;
+        top: 25px;
+      }*/
+
+      a {
+        display: block;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-family: Montserrat;
+        font-size: 14px;
+        color: @lightgrey;
+        text-decoration: none solid rgb(112, 112, 112);
+      }
+      &:last-child {
+        img {
+          width: 22px;
+          height: 17px;
+        }
+      }
+    }
+  }
 }
 
-ul.navbar {
+/*ul.navbar {
   margin: 0;
   > li.navBtn {
     margin: 14px 22px;
@@ -78,4 +144,11 @@ ul.navbar {
       margin: 14px 309px 14px 0px;
     }
   }
-}
+}*/
+
+/*
+.searchbar {
+  padding: 0 235px;
+  height: 130px;
+  rder-bottom: @silver 2px solid;
+}*/
