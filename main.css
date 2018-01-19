@@ -1,4 +1,5 @@
 body {
+  max-width: 1920px;
   margin: 0;
 }
 .wrapper {
@@ -6,16 +7,16 @@ body {
   border-top: #DEDEDE 0.5px solid;
   display: flex;
   justify-content: center;
-  padding: 0 224px;
+  padding: 0 360px;
 }
 .header {
-  height: 50px;
   width: 100%;
-  display: inline-flex;
-  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  height: 50px;
 }
 .navBtn {
-  display: inline-block;
+  flex-grow: 1;
 }
 .navBtn img {
   width: 20px;
@@ -28,59 +29,38 @@ body {
   transform: rotate(23deg);
 }
 .navBtn span {
-  min-width: 140px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
   font-family: Montserrat;
   font-size: 14px;
   color: #707070;
   font-weight: 300;
   text-decoration: none solid #707070;
 }
-.navbar ul {
+ul.navbar {
   list-style-type: none;
+  display: flex;
   margin: 0;
   padding: 0;
 }
-.navbar ul > li.navBtn {
-  display: inline-block;
+ul.navbar > li.navBtn {
+  display: flex;
   padding: 0 27px;
-}
-.navbar ul > li.navBtn.spacing {
   border-right: 1px solid #c9c8c7;
 }
-.navbar ul > li.navBtn.spacing:before {
-  content: "";
-  height: 9px;
-  width: 1px;
-  background-color: black;
-  position: absolute;
-  right: 235px;
-  top: 41px;
+ul.navbar > li.navBtn:last-of-type {
+  padding: 2px 27px;
+  border-right: none;
 }
-.navbar ul > li.navBtn.spacing:after {
-  content: "";
-  height: 9px;
-  width: 1px;
-  background-color: black;
-  position: absolute;
-  right: 235px;
-  top: 1px;
+ul.navbar > li.navBtn:last-of-type img {
+  height: 16px;
+  width: 22px;
 }
-.navbar ul a {
-  display: block;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
+ul.navbar a {
+  display: flex;
+  align-items: center;
   font-family: Montserrat;
   font-size: 14px;
   color: #707070;
   text-decoration: none solid #707070;
-}
-.navbar ul:last-child img {
-  width: 22px;
-  height: 17px;
 }
 .searchbar {
   display: flex;
@@ -98,10 +78,27 @@ body {
   color: #000000;
   font-weight: 500;
   text-decoration: none solid #000000;
+  /*    > img {
+      height: 55px;
+      widows: 55px;
+    }*/
+}
+.searchbar .mainIcon span {
+  margin: 0 20px;
+  font-weight: 900;
+}
+.searchbar .mainIcon span:after {
+  content: "";
+  position: absolute;
+  top: 72px;
+  width: 55px;
+  height: 55px;
+  background: transparent url('images/RetinaIcon 1.svg') no-repeat;
+  display: inline-block;
+  margin: 0 0 0 -40px;
 }
 .searchbar .search {
   display: flex;
-  justify-content: space-between;
   width: 509px;
   height: 48px;
   border: 1px solid #ff8f00;
@@ -116,24 +113,23 @@ body {
 .searchbar .search input {
   border: none;
   padding-left: 28px;
+  flex-grow: 1;
 }
 .searchbar .search input:focus {
   outline: 0;
 }
-.searchbar .search div {
+.searchbar .search .searchButtons {
   display: flex;
-}
-.searchbar .search button {
-  width: 56px;
-  height: 48px;
+  align-items: center;
   border: none;
   color: #707070;
   background-color: #fff;
 }
-.searchbar .search button.searchDropdown {
-  margin: 0 40px;
+.searchbar .search .searchButtons .searchDropdown {
+  padding: 0 40px;
+  cursor: pointer;
 }
-.searchbar .search button.searchDropdown:after {
+.searchbar .search .searchButtons .searchDropdown:after {
   content: '';
   display: inline-block;
   width: 0;
@@ -141,32 +137,42 @@ body {
   border-style: solid;
   border-width: 4px 4px 0 4px;
   border-color: #707070 transparent transparent transparent;
-  position: absolute;
-  top: 113px;
-  margin: 0px 40px;
+  margin: 0px 5px;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.searchbar .search button.searchBtn {
+.searchbar .search .searchButtons .searchBtn {
   background-color: #ff8f00;
+  height: 48px;
+  width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-.searchbar .search button.searchBtn img {
+.searchbar .search .searchButtons .searchBtn img {
   width: 22px;
   height: 22px;
   fill: #ffffff;
 }
-.searchbar .button.share {
+.searchbar .searchbarButtons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+.searchbar .searchbarButtons .button.share {
   margin: 0 0 0 44px;
 }
-.searchbar .button.favourite {
+.searchbar .searchbarButtons .button.favourite {
   margin: 0 0 0 40px;
 }
-.searchbar .button.basket {
+.searchbar .searchbarButtons .button.basket {
   margin: 0 0 0 61px;
 }
-.searchbar .button.basket:after {
+.searchbar .searchbarButtons .button.basket:after {
   content: '2';
   display: inline-block;
   width: 13px;
@@ -183,7 +189,7 @@ body {
   line-height: 20px;
   padding: 0 0 0 7px;
 }
-.searchbar .price {
+.searchbar .searchbarButtons .price {
   margin: 0 0 0 21px;
   width: 122px;
   height: 24px;
@@ -193,7 +199,7 @@ body {
   font-weight: bold;
   text-decoration: none solid #202020;
 }
-.searchbar .button {
+.searchbar .searchbarButtons .button {
   height: 32px;
   width: 32px;
 }
