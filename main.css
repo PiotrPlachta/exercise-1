@@ -275,7 +275,7 @@ ul.navbar a {
 .products {
   width: 100%;
   margin-top: 53px;
-  display: flex;
+  display: inline-block;
   font-family: Montserrat;
   font-size: 14px;
   color: #202020;
@@ -283,6 +283,7 @@ ul.navbar a {
   text-decoration: none solid #202020;
 }
 .products .weeklyOffer {
+  float: left;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -363,4 +364,60 @@ ul.navbar a {
   font-family: Montserrat;
   font-size: 16px;
   text-decoration: none solid #ffffff;
+}
+.products .recommended {
+  padding: 0 0 0 51px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.products .recommended > h1 {
+  font-family: Montserrat;
+  font-size: 25px;
+  color: #202020;
+  font-weight: 500;
+  text-decoration: none solid #202020;
+  border-bottom: #c8c8c8 1px solid;
+  width: 100%;
+  height: 35px;
+}
+.products .recommended .prodWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.products .recommended .prodWrapper > .product {
+  max-width: 225px;
+  height: 275px;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  margin: 0 9px;
+}
+.products .recommended .prodWrapper > .product img.productImg {
+  width: 212px;
+  height: 212px;
+}
+.products .recommended .prodWrapper > .product p1 {
+  width: 225px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #202020;
+  font-weight: 600;
+  text-decoration: none solid #202020;
+  line-height: 22px;
+}
+.products .recommended .prodWrapper > .product p2 {
+  width: 225px;
+  font-family: Montserrat;
+  font-size: 18px;
+  color: #202020;
+  font-weight: 200;
+  text-decoration: none solid #202020;
+  line-height: 22px;
 }
