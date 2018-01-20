@@ -47,12 +47,13 @@ ul.navbar > li.navBtn {
   border-right: 1px solid #c9c8c7;
 }
 ul.navbar > li.navBtn:last-of-type {
-  padding: 2px 27px;
+  padding: 2px 0 2px 27px;
   border-right: none;
 }
 ul.navbar > li.navBtn:last-of-type img {
   height: 16px;
   width: 22px;
+  margin: 0;
 }
 ul.navbar a {
   display: flex;
@@ -78,10 +79,6 @@ ul.navbar a {
   color: #000000;
   font-weight: 500;
   text-decoration: none solid #000000;
-  /*    > img {
-      height: 55px;
-      widows: 55px;
-    }*/
 }
 .searchbar .mainIcon span {
   margin: 0 20px;
@@ -198,13 +195,172 @@ ul.navbar a {
   color: #202020;
   font-weight: bold;
   text-decoration: none solid #202020;
+  text-align: right;
 }
 .searchbar .searchbarButtons .button {
   height: 32px;
   width: 32px;
 }
+.menuBar {
+  display: flex;
+  width: 100%;
+  font-family: Montserrat;
+  font-size: 14px;
+  color: #000000;
+  font-weight: 500;
+  text-decoration: none solid #000000;
+}
+.menuBar .menuButton {
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 32px;
+  cursor: pointer;
+  color: #707070;
+}
+.menuBar .categories {
+  font-size: 18px;
+  font-weight: 700;
+  padding-left: 0;
+  color: black;
+}
+.menuBar .categories:before {
+  border-bottom: 9px double black;
+  border-top: 3px solid black;
+  content: "";
+  height: 3px;
+  width: 22px;
+  margin-right: 12px;
+}
+.menuBar .wrapperHelp {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+.menuBar .wrapperHelp .menuButton.help {
+  padding-right: 0;
+}
+.menuBar .wrapperHelp .menuButton.help > img {
+  height: 25px;
+  width: 25px;
+  padding-right: 9px;
+}
 .carousel {
   display: flex;
   justify-content: center;
   background: black;
+}
+.carousel .carouselButtons {
+  position: absolute;
+  top: 710px;
+  display: flex;
+}
+.carousel .carouselButtons .carBtn {
+  height: 12px;
+  width: 12px;
+  margin-right: 13px;
+  background-color: #707070;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.carousel .carouselButtons .carBtn:hover {
+  background-color: #c9c8c7;
+  height: 12px;
+  width: 12px;
+  transition: all 0.5s;
+}
+.products {
+  width: 100%;
+  margin-top: 53px;
+  display: flex;
+  font-family: Montserrat;
+  font-size: 14px;
+  color: #202020;
+  font-weight: 500;
+  text-decoration: none solid #202020;
+}
+.products .weeklyOffer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 30px 38px;
+  border: 2px solid #ff8f00;
+  border-radius: 54px;
+  width: 402px;
+  /*p3 { //czy nie lepiej uzyc osobnego elementu (czy ma to znaczenie przy backendzie)
+      font-family: Montserrat;
+      width: 50%;
+      font-size: 30px;
+      color: @darkgrey;
+      text-decoration: line-through;
+
+    }*/
+}
+.products .weeklyOffer h1 {
+  font-size: 22px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.products .weeklyOffer h2 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  height: 56px;
+  width: 120px;
+  font-size: 16px;
+  color: white;
+  background-color: #ff8f00;
+  border-radius: 10px;
+}
+.products .weeklyOffer img {
+  height: 284px;
+  width: 284px;
+  margin-top: 13px;
+}
+.products .weeklyOffer p1 {
+  width: 100%;
+  margin-top: 34px;
+  color: #202020;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none solid #202020;
+}
+.products .weeklyOffer p2 {
+  margin-top: 34px;
+  width: 50%;
+  font-family: Montserrat;
+  font-size: 35px;
+  color: #ff8f00;
+  display: flex;
+  align-items: flex-end;
+}
+.products .weeklyOffer p2:last-of-type {
+  font-size: 30px;
+  color: #d4d4d4;
+  text-decoration: line-through;
+  text-align: right;
+  justify-content: flex-end;
+}
+.products .weeklyOffer .addToBasket {
+  margin-top: 55px;
+  width: 200px;
+  height: 47px;
+  border-radius: 10px;
+  background-color: #ff8f00;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  text-decoration: none solid #ffffff;
 }
