@@ -574,3 +574,26 @@ ul.navbar a {
   line-height: 32px;
   margin: 0;
 }
+.footer {
+  background-color: #292929;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  padding: 0 330px;
+  margin-top: 48px;
+}
+.footer > span {
+  font-family: Muli;
+  font-size: 16px;
+  color: #c2c0c0;
+  flex-grow: 1;
+}
+.footer > .social {
+  display: flex;
+}
+.footer > .social > img {
+  height: 35px;
+  width: 35px;
+  fill: #ffffff;
+  margin: 0 10px;
+}
