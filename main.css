@@ -6,7 +6,7 @@ body {
   border-top: #DEDEDE 0.5px solid;
   display: flex;
   justify-content: center;
-  padding: 0 360px;
+  padding: 0 330px;
 }
 .header {
   width: 100%;
@@ -474,4 +474,103 @@ ul.navbar a {
 .brands .brands > img#brandId6 {
   width: 128px;
   height: 47px;
+}
+.newsletter {
+  padding: 0 330px;
+  background-color: #ff8f00;
+  height: 112px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  margin: 93px 0;
+  font-family: Montserrat;
+}
+.newsletter .newsletTxt {
+  font-size: 27px;
+  color: #ffffff;
+  font-weight: 500;
+}
+.newsletter .newsletTxt > span {
+  text-decoration: underline solid #ffffff;
+}
+.newsletter .wrapperSignup {
+  display: flex;
+  width: 509px;
+  height: 48px;
+  border-radius: 48px;
+  background-color: #ffffff;
+  overflow: hidden;
+  color: #707070;
+}
+.newsletter .wrapperSignup > input {
+  font-family: Montserrat;
+  font-size: 16px;
+  border: none;
+  padding-left: 28px;
+  flex-grow: 1;
+}
+.newsletter .wrapperSignup > input:focus {
+  outline: 0;
+}
+.newsletter .wrapperSignup .newsletArrow {
+  background-color: #202020;
+  height: 48px;
+  width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.newsletter .wrapperSignup .newsletArrow img {
+  width: 25px;
+  height: 25px;
+  fill: #ffffff;
+}
+.infoTable {
+  padding: 0 330px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.infoTable > .col {
+  display: flex;
+  flex-flow: column wrap;
+}
+.infoTable > .col > p1 {
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #1c1c1c;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.infoTable > .col > p2 {
+  font-family: Montserrat;
+  font-size: 20px;
+  color: #202020;
+  display: flex;
+  align-items: center;
+}
+.infoTable > .col > p2 > img {
+  height: 25px;
+  width: 25px;
+}
+.infoTable > .col > p2 > img:first-of-type {
+  transform: rotate(23deg);
+}
+.infoTable > .col > p3 {
+  font-family: Montserrat;
+  font-size: 18px;
+  color: #202020;
+  font-weight: 600;
+  margin-bottom: 26px;
+  padding-left: 25px;
+}
+.infoTable > .col > p {
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #1c1c1c;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0;
 }

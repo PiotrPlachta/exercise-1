@@ -16,7 +16,7 @@ body {
   border-top: @border 0.5px solid;
   display: flex;
   justify-content: center;
-  padding: 0 360px;
+  padding: 0 330px;
 }
 
 .header {
@@ -474,29 +474,132 @@ ul.navbar {
     flex-flow: row wrap;
     justify-content: space-between;
 
-    >img#brandId1 {
+    > img#brandId1 {
       width: 119px;
       height: 33px;
     }
-    >img#brandId2 {
+    > img#brandId2 {
       width: 122px;
       height: 35px;
     }
-    >img#brandId3 {
+    > img#brandId3 {
       width: 135px;
       height: 43px;
     }
-    >img#brandId4 {
+    > img#brandId4 {
       width: 131px;
       height: 38px;
     }
-    >img#brandId5 {
+    > img#brandId5 {
       width: 132px;
       height: 40px;
     }
-    >img#brandId6 {
+    > img#brandId6 {
       width: 128px;
       height: 47px;
     }
   }
 }
+
+.newsletter {
+  padding: 0 330px;
+  background-color: @orange;
+  height: 112px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  margin: 93px 0;
+  font-family: Montserrat;
+  .newsletTxt {
+    font-size: 27px;
+    color: @white;
+    font-weight: 500;
+    > span {
+      text-decoration: underline solid @white;
+    }
+  }
+  .wrapperSignup {
+    display: flex;
+    width: 509px;
+    height: 48px;
+    border-radius: 48px;
+    background-color: @white;
+    overflow: hidden;
+    color: @lightgrey;
+    > input {
+      font-family: Montserrat;
+      font-size: 16px;
+      border: none;
+      padding-left: 28px;
+      flex-grow: 1;
+      &:focus {
+        outline: 0;
+      }
+    }
+    .newsletArrow {
+      background-color: @black;
+      height: 48px;
+      width: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      img {
+        width: 25px;
+        height: 25px;
+        fill: @white;
+      }
+    }
+  }
+}
+
+.infoTable {
+  padding: 0 330px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  > .col {
+    display: flex;
+    flex-flow: column wrap;
+    > p1 {
+      font-family: Montserrat;
+      font-size: 16px;
+      color: #1c1c1c;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+    > p2 {
+      font-family: Montserrat;
+      font-size: 20px;
+      color: #202020;
+      display: flex;
+      align-items: center;
+      > img {
+        height: 25px;
+        width: 25px;
+        &:first-of-type {
+          transform: rotate(23deg);
+        }
+      }
+    }
+    > p3 {
+      font-family: Montserrat;
+      font-size: 18px;
+      color: #202020;
+      font-weight: 600;
+      margin-bottom: 26px;
+      padding-left: 25px;
+    }
+    > p {
+      font-family: Montserrat;
+      font-size: 16px;
+      color: #1c1c1c;
+      font-weight: 300;
+      line-height: 32px;
+      margin: 0;
+    }
+  }
+}
+
+
