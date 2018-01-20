@@ -12,7 +12,7 @@ body {
 }
 
 .wrapper {
-  border-bottom: @silver 0.5px solid;
+  //border-bottom: @silver 0.5px solid;
   border-top: @border 0.5px solid;
   display: flex;
   justify-content: center;
@@ -287,6 +287,9 @@ ul.navbar {
         width: 12px;
         transition: all 0.5s;
       }
+      &:first-of-type {
+        background-color: @darkgrey; //do wykomentowania
+      }
     }
   }
 }
@@ -439,6 +442,61 @@ ul.navbar {
           line-height: 22px;
         }
       }
+    }
+  }
+}
+
+#wrapperBrands {
+  border: none;
+}
+
+.brands {
+  display: flex;
+  flex-flow: column;
+  font-family: Montserrat;
+  color: @black;
+  font-weight: 600;
+  width: 100%;
+  .brandsTitle {
+    width: 100%;
+    font-size: 25px;
+    border-bottom: 1px solid @darkgrey;
+    height: 50px;
+    margin: 96px 0 88px 0;
+    > span {
+      border-bottom: 4px solid #ff8f00;
+      line-height: 50px;
+      float: left;
+    }
+  }
+  .brands {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    >img#brandId1 {
+      width: 119px;
+      height: 33px;
+    }
+    >img#brandId2 {
+      width: 122px;
+      height: 35px;
+    }
+    >img#brandId3 {
+      width: 135px;
+      height: 43px;
+    }
+    >img#brandId4 {
+      width: 131px;
+      height: 38px;
+    }
+    >img#brandId5 {
+      width: 132px;
+      height: 40px;
+    }
+    >img#brandId6 {
+      width: 128px;
+      height: 47px;
     }
   }
 }

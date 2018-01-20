@@ -3,7 +3,6 @@ body {
   margin: 0;
 }
 .wrapper {
-  border-bottom: #c8c8c8 0.5px solid;
   border-top: #DEDEDE 0.5px solid;
   display: flex;
   justify-content: center;
@@ -272,6 +271,9 @@ ul.navbar a {
   width: 12px;
   transition: all 0.5s;
 }
+.carousel .carouselButtons .carBtn:first-of-type {
+  background-color: #c9c8c7;
+}
 .products {
   width: 100%;
   margin-top: 53px;
@@ -420,4 +422,56 @@ ul.navbar a {
   font-weight: 200;
   text-decoration: none solid #202020;
   line-height: 22px;
+}
+#wrapperBrands {
+  border: none;
+}
+.brands {
+  display: flex;
+  flex-flow: column;
+  font-family: Montserrat;
+  color: #202020;
+  font-weight: 600;
+  width: 100%;
+}
+.brands .brandsTitle {
+  width: 100%;
+  font-size: 25px;
+  border-bottom: 1px solid #c9c8c7;
+  height: 50px;
+  margin: 96px 0 88px 0;
+}
+.brands .brandsTitle > span {
+  border-bottom: 4px solid #ff8f00;
+  line-height: 50px;
+  float: left;
+}
+.brands .brands {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.brands .brands > img#brandId1 {
+  width: 119px;
+  height: 33px;
+}
+.brands .brands > img#brandId2 {
+  width: 122px;
+  height: 35px;
+}
+.brands .brands > img#brandId3 {
+  width: 135px;
+  height: 43px;
+}
+.brands .brands > img#brandId4 {
+  width: 131px;
+  height: 38px;
+}
+.brands .brands > img#brandId5 {
+  width: 132px;
+  height: 40px;
+}
+.brands .brands > img#brandId6 {
+  width: 128px;
+  height: 47px;
 }
